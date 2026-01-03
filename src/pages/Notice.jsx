@@ -1,34 +1,32 @@
+import React from 'react';
+import { Link } from "react-router-dom";
+
 function Notice() {
-    return (
-      <div style={{ padding: "40px", maxWidth: "900px", margin: "0 auto" }}>
-        <h1>이벤트 / 공지사항</h1>
-  
-        <ul>
-          <li>
-            연습장 이용은 1일 1회만 입장 가능합니다.
-            퍼팅장 및 벙커장은 이용 가능하며 사용 후 반드시 원위치 바랍니다.
-          </li>
-  
-          <li>
-            연습 시 반드시 연습화 또는 운동화만 착용 가능합니다.
-            필드화 착용은 불가합니다.
-          </li>
-  
-          <li>
-            레슨권 이용 회원은 전날 밤 11시까지만 예약 가능하며,
-            당일 예약은 불가합니다.
-            취소 시 1회 차감되며 이월은 불가합니다.
-          </li>
-  
-          <li>
-            연습장 이용 만료 시 락커 정리를 부탁드립니다.
-            1주일 이상 보관 시 보관료가 발생하며,
-            3개월 이상 경과 시 폐기 처리됩니다.
-          </li>
-        </ul>
-      </div>
-    );
-  }
-  
-  export default Notice;
-  
+  return (
+    <div className="min-h-screen bg-[#f7fee7] flex flex-col">
+      <nav className="bg-white p-4 border-b border-[#2d5a27] flex items-center">
+        <Link to="/" className="text-[#2d5a27] font-bold mr-4">← 뒤로가기</Link>
+        <h1 className="text-xl font-black text-[#2d5a27]">공지사항</h1>
+      </nav>
+
+      <main className="p-8 max-w-2xl mx-auto w-full">
+        <div className="space-y-4">
+          {/* 공지사항 목록 */}
+          <div className="bg-white p-6 rounded-2xl shadow-md border-l-8 border-[#2d5a27]">
+            <h2 className="text-lg font-bold text-gray-800">[안내] 결제 혜택 안내</h2>
+            <p className="text-gray-600 mt-2">서울페이 및 온누리 상품권 결제가 가능합니다. 이용권 구매 시 약 10%의 할인 효과를 누리세요!</p>
+            <span className="text-sm text-gray-400 mt-4 block">2025.12.26</span>
+          </div>
+
+          <div className="bg-white p-6 rounded-2xl shadow-md">
+            <h2 className="text-lg font-bold text-gray-800">[공지] 야외 퍼팅장 이용 수칙</h2>
+            <p className="text-gray-600 mt-2">안전한 이용을 위해 지정된 장소에서만 퍼팅 연습을 부탁드립니다.</p>
+            <span className="text-sm text-gray-400 mt-4 block">2025.12.20</span>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+}
+
+export default Notice;
