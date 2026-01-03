@@ -13,26 +13,28 @@ const Notice = () => {
           <ul className="space-y-1 ml-6 list-none">
             <li>· 평일: 09:00 ~ 22:00</li>
             <li>· 주말: 10:00 ~ 18:00</li>
-            {/* 요청하신 휴무일 정보를 여기에 추가했습니다 */}
+            {/* 드디어 추가되는 휴무일 정보 */}
             <li className="text-red-600 font-bold mt-1">
               · 정기 휴무일: 2째 주, 마지막 주 일요일
             </li>
           </ul>
         </section>
 
-        {/* 나머지 섹션 동일 */}
+        {/* 레슨 방식 */}
         <section>
           <h2 className="text-xl font-bold flex items-center gap-2 mb-1">
             <span className="text-[#8a5cf5]">✔</span> 레슨 방식: 1:1
           </h2>
         </section>
 
+        {/* 레슨 시간 */}
         <section>
           <h2 className="text-xl font-bold flex items-center gap-2 mb-2">
             <span className="text-[#8a5cf5]">✔</span> 레슨 시간: 20분
           </h2>
         </section>
 
+        {/* 예약 유의사항 */}
         <p className="text-sm font-medium text-gray-700 mt-6 pt-4 border-t border-gray-200">
           ※ 예약은 전날 오후 23:00까지, 당일예약 불가
         </p>
